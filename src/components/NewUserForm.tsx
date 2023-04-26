@@ -1,7 +1,11 @@
 import { useRef } from "react"
 import User from "../types/User"
+import { useDispatch } from 'react-redux'
+import { addUser } from "../features/usersSlice"
 
 function NewUserForm() {
+    const dispatch = useDispatch()
+
     const nameRef = useRef<HTMLInputElement|null>(null)
     const usernameRef = useRef<HTMLInputElement>(null)
     const emailRef = useRef<HTMLInputElement>(null)
@@ -13,7 +17,9 @@ function NewUserForm() {
             username: usernameRef.current ? usernameRef.current?.value : '',
             email: emailRef.current ? emailRef.current?.value : '',
         }
-        console.log(user);
+        // console.log(user);
+
+        dispatch(addUser(user))
 
         //Send user
 
@@ -31,7 +37,7 @@ function NewUserForm() {
 
                 <label htmlFor="email">Email</label>
                 <input id="email" type='email' placeholder="Enter email" ref={emailRef}/>
-                
+
                 <button onClick={submit}>Add</button>
             </form>
         </section>

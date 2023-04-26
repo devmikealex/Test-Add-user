@@ -20,8 +20,6 @@ function App() {
         <main>
             <h1>Test KRUG</h1>
             <NewUserForm />
-            <h2>Users list ({users.length}):</h2>
-            <button id='loadBtn'>Load</button>
             <UsersTable users={users} />
         </main>
     )
