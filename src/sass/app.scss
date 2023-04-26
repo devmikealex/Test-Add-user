@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // border: 1px solid red;
+}
+
+body {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem;
+    // background-color: rgb(239, 242, 225);
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    color: white;
+}
+
+h1,h2 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 2px solid rgb(34, 0, 255);
+
+    input {
+        margin-top: 0.2em;
+        margin-bottom: 1em;
+        padding: 0.3em;
+        background-color:hsla(0, 0%, 100%, 0.637);
+        border: none;
+
+        &::placeholder {
+            color: rgb(121, 121, 121);
+        }
+    }
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+button,
+input {
+    font-size: inherit;
+}
+
+button {
+    padding: 0.6em 1em;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}
+
+#loadBtn{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 0.8em;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+th {
+    text-align: left;
+    background-color: #55608f;
+}
+
+tbody tr {
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
