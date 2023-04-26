@@ -15,32 +15,55 @@ body {
     min-height: 100vh;
 }
 
-h1,h2 {
+h1,
+h2 {
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 1.4rem;
 }
 
 form {
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    border: 2px solid rgb(34, 0, 255);
+    padding: 3rem;
+    // border: 2px solid rgb(34, 0, 255);
+    background-color: #fff;
+    margin-bottom: 4rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 
     input {
-        margin-top: 0.2em;
-        margin-bottom: 1em;
-        padding: 0.3em;
-        background-color:hsla(0, 0%, 100%, 0.637);
+        margin-top: 0.4em;
+        margin-bottom: 1.4em;
+        padding: 0.8em;
+        background: #f2f2f2;
         border: none;
 
         &::placeholder {
-            color: rgb(121, 121, 121);
+            color: #adadad;
+        }
+    }
+
+    button {
+        box-shadow: none;
+        background: linear-gradient(45deg, #5f2c82, #49a09d, #46b0cb);
+        padding: 1em;
+        min-width: 150px;
+        margin: 0 auto;
+        margin-top: 1rem;
+        text-transform: uppercase;
+        background-size: 200% 100%;
+        background-position: 0 0;
+        transition: background-position .5s;
+
+        &:hover {
+            background-position: 100% 0;
         }
     }
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -48,22 +71,30 @@ form {
 button,
 input {
     font-size: inherit;
+    letter-spacing: 1px;
+    outline-color: #a43ce9;
+}
+
+label {
+    color: #555;
+    letter-spacing: 1px;
 }
 
 button {
     padding: 0.6em 1em;
     color: white;
-    background-color: rgba(255, 255, 255, 0.2);
     border: none;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     cursor: pointer;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
 
-    &:hover{
+    &:hover {
         background-color: rgba(255, 255, 255, 0.4);
     }
 }
 
-#loadBtn{
+#loadBtn {
     width: 100%;
     margin-bottom: 1rem;
 }
@@ -71,7 +102,7 @@ button {
 table {
     width: 100%;
     border-collapse: collapse;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 th,
@@ -89,7 +120,11 @@ th {
 tbody tr {
     transition: background-color 0.2s;
 
+    &:nth-child(odd) {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
     &:hover {
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.25);
     }
 }
