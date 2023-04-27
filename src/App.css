@@ -5,7 +5,7 @@
 }
 
 body {
-  font-size: 20px;
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   padding: 2rem;
   background: linear-gradient(45deg, #49a09d, #5f2c82);
@@ -14,7 +14,7 @@ body {
 }
 
 h1,
-h2 {
+h2, h4 {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 1.4rem;
@@ -60,6 +60,9 @@ form button {
 }
 form button:hover {
   background-position: 100% 0;
+}
+form h4 {
+  color: grey;
 }
 
 .container {
@@ -123,4 +126,21 @@ tbody tr:nth-child(odd) {
 }
 tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.25);
+}
+
+.warnIcon {
+  opacity: 0;
+  display: inline-block;
+  transition: opacity 0.3s;
+}
+
+td:hover .warnIcon {
+  visibility: visible;
+  opacity: 1;
+}
+
+.x-icon {
+  width: 1.4em;
+  margin-left: 0.4em;
+  margin-bottom: -0.55em;
 }

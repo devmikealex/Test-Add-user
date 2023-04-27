@@ -6,7 +6,7 @@
 }
 
 body {
-    font-size: 20px;
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 2rem;
     // background-color: rgb(239, 242, 225);
@@ -16,10 +16,18 @@ body {
 }
 
 h1,
-h2 {
+h2,h4 {
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 1.4rem;
+}
+
+button,
+input {
+    font-size: inherit;
+    letter-spacing: 1px;
+    outline-color: #a43ce9;
+    text-transform: uppercase;
 }
 
 form {
@@ -52,7 +60,6 @@ form {
         min-width: 150px;
         margin: 0 auto;
         margin-top: 1rem;
-        text-transform: uppercase;
         background-size: 200% 100%;
         background-position: 0 0;
         transition: background-position .5s;
@@ -61,18 +68,15 @@ form {
             background-position: 100% 0;
         }
     }
+
+    h4{
+        color:grey; 
+    }
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-button,
-input {
-    font-size: inherit;
-    letter-spacing: 1px;
-    outline-color: #a43ce9;
 }
 
 label {
@@ -118,7 +122,7 @@ th {
 }
 
 tbody tr {
-    transition: background-color 0.2s;
+    // transition: background-color 0.2s;
 
     &:nth-child(odd) {
         background-color: rgba(255, 255, 255, 0.1);
@@ -127,4 +131,31 @@ tbody tr {
     &:hover {
         background-color: rgba(255, 255, 255, 0.25);
     }
+}
+
+.warnIcon{
+    // visibility: hidden;
+    opacity: 0;
+    display: inline-block;
+    transition: opacity 0.3s;
+}
+td:hover .warnIcon { 
+    visibility: visible;
+    opacity: 1;
+}
+.x-icon{
+    width: 1.4em;
+    margin-left: 0.4em;
+    margin-bottom: -0.55em;
+}
+
+.clickable{
+    cursor: pointer;
+    &:hover{
+        background-color: rgba(255, 215, 215, 0.42);
+    }
+}
+
+.id-cell{
+    max-width: 42px;
 }

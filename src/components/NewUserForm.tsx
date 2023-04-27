@@ -1,7 +1,13 @@
-import { useRef } from "react"
-import User from "../types/User"
+import { MouseEvent, useRef } from "react"
 import { useDispatch } from 'react-redux'
 import { addUser } from "../features/usersSlice"
+import User from "../types/User"
+
+// TODO должно приходить с бека, но его нет
+let fakeID = 10 
+function getFakeID() {
+    return ++fakeID
+}
 
 function NewUserForm() {
     const dispatch = useDispatch()
@@ -10,9 +16,10 @@ function NewUserForm() {
     const usernameRef = useRef<HTMLInputElement>(null)
     const emailRef = useRef<HTMLInputElement>(null)
 
-    function submit() {
+    function submit(e: MouseEvent) {
+        e.preventDefault()
         const user: User = {
-            id: 999,
+            id: getFakeID(),
             name: nameRef.current ? nameRef.current.value : '',
             username: usernameRef.current ? usernameRef.current?.value : '',
             email: emailRef.current ? emailRef.current?.value : '',
@@ -29,6 +36,7 @@ function NewUserForm() {
     return (
         <section className="container">
             <form>
+                <h4>Create a new user</h4>
                 <label htmlFor="name">Name</label>
                 <input id="name" type='text' placeholder="Enter name" ref={nameRef}/>
 

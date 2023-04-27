@@ -6,13 +6,14 @@ import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { loadUsers } from '../features/usersSlice'
 
-interface Props {
-    users: User[]
-}
+// interface Props {
+//     users: User[]
+// }
 
 //TODO delete props
 
-function UsersTable({users: userss}:Props) {
+// function UsersTable({users: userss}:Props) {
+function UsersTable() {
     const dispatch = useDispatch()
     const users = useSelector((state: RootState) => state.users)
 
@@ -26,7 +27,7 @@ function UsersTable({users: userss}:Props) {
                         <th>ID</th>
                         <th>Name</th>
                         <th>UserName</th>
-                        <th>EMail</th>
+                        <th>Email</th>
                     </tr>
                 </thead>
                 <tbody>
