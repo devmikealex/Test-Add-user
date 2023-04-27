@@ -25,7 +25,7 @@ const initialState: User[] = [
 
 export const fetchUsers = createAsyncThunk('users/fetchUsers', async (_, { rejectWithValue }) => {
     let users: User[] = []
-    const res = await fetch('http://jsonplaceholder.typicode.com/users')
+    const res = await fetch('https://jsonplaceholder.typicode.com/users')
     if (!res.ok) return rejectWithValue('Server error ' + res.status)
     users = await res.json()
     return users
