@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react'
 // import './App.css'
 import './sass/app.scss'
-import User from './types/User'
 import UsersTable from './components/UsersTable'
 import NewUserForm from './components/NewUserForm'
 
@@ -19,7 +17,7 @@ function App() {
 
     return (
         <main>
-            <h1>KRUG Test</h1>
+            <h1>Test Add user</h1>
             <NewUserForm />
             {/* <UsersTable users={users} /> */}
             <UsersTable />

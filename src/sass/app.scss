@@ -6,17 +6,18 @@
 }
 
 body {
-    font-size: 16px;
+    font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 2rem;
     // background-color: rgb(239, 242, 225);
-    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    background: linear-gradient(45deg, #17817d, #5f2c82);
     color: white;
     min-height: 100vh;
 }
 
 h1,
-h2,h4 {
+h2,
+h4 {
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 1.4rem;
@@ -69,8 +70,8 @@ form {
         }
     }
 
-    h4{
-        color:grey; 
+    h4 {
+        color: grey;
     }
 }
 
@@ -133,29 +134,30 @@ tbody tr {
     }
 }
 
-.warnIcon{
-    // visibility: hidden;
+.warnIcon {
     opacity: 0;
     display: inline-block;
     transition: opacity 0.3s;
 }
-td:hover .warnIcon { 
-    visibility: visible;
-    opacity: 1;
+
+td:hover .warnIcon {
+    opacity: 0.8;
 }
-.x-icon{
+
+.x-icon {
     width: 1.4em;
     margin-left: 0.4em;
     margin-bottom: -0.55em;
 }
 
-.clickable{
+.clickable {
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         background-color: rgba(255, 215, 215, 0.42);
     }
 }
 
-.id-cell{
+.id-cell {
     max-width: 42px;
 }
