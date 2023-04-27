@@ -48,7 +48,7 @@ export const usersSlice = createSlice({
             state = action.payload
             return state
         }),
-        builder.addCase(fetchUsers.rejected, (state, action) => {
+        builder.addCase(fetchUsers.rejected, (_, action) => {
             console.warn("Fetch rejected:", action.payload)
             return initialState
         })
