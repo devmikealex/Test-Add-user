@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Test row for users props 1`] = `
+<div>
+  <tr>
+    <td>
+      <div
+        class="id-cell"
+      >
+        555
+      </div>
+    </td>
+    <td
+      class="clickable"
+    >
+      Default Name 555
+      <div
+        class="warnIcon"
+      >
+        <img
+          alt="x icon"
+          class="x-icon"
+          src="/assets/x-icon.svg"
+        />
+      </div>
+    </td>
+    <td>
+      Test555
+    </td>
+    <td>
+      555@com.com
+    </td>
+  </tr>
+</div>
+`;
