@@ -42,6 +42,9 @@ describe('Form validation test', () => {
     // })
 
     let add: HTMLButtonElement
+    let a: HTMLInputElement
+    let b: HTMLInputElement
+    let c: HTMLInputElement
 
     it('Test for all empty inputs', () => {
         add = screen.getByRole('button', { name: 'Add' })
@@ -52,7 +55,7 @@ describe('Form validation test', () => {
     })
 
     it('Test for Name only', async () => {
-        const a = screen.getByPlaceholderText('Enter name') as HTMLInputElement
+        a = screen.getByPlaceholderText('Enter name')
         fireEvent.change(a, { target: { value: 'Aaaaa aaa' } })
         // console.log(a.value);
         // expect(a.value).toBeTruthy()
@@ -64,7 +67,7 @@ describe('Form validation test', () => {
     })
 
     it('Test for Name and Username', () => {
-        const b = screen.getByPlaceholderText('Enter username') as HTMLInputElement
+        b = screen.getByPlaceholderText('Enter username') as HTMLInputElement
         fireEvent.change(b, { target: { value: 'Bbbb bbbb' } })
         fireEvent.click(add)
         expect(screen.queryByText('Name required')).toBeNull()
@@ -73,12 +76,16 @@ describe('Form validation test', () => {
     })
 
     it('Test for all inputs', () => {
-        const c = screen.getByPlaceholderText('Enter email') as HTMLInputElement
+        c = screen.getByPlaceholderText('Enter email') as HTMLInputElement
         fireEvent.change(c, { target: { value: 'Cccc ccc cc' } })
         fireEvent.click(add)
         expect(screen.queryByText('Name required')).toBeNull()
         expect(screen.queryByText('Namename required')).toBeNull()
         expect(screen.queryByText('Email required')).toBeNull()
+
+        expect(a.value).toBeFalsy()
+        expect(b.value).toBeFalsy()
+        expect(c.value).toBeFalsy()
     })
 
     it('Check new user in table', () => {
